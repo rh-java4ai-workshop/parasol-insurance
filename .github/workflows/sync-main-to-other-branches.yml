@@ -75,7 +75,7 @@ jobs:
     name: Sync to ${{ matrix.target_branch }} branch
     steps:
       - name: Create token for PR creation
-        uses: actions/create-github-app-token@v1
+        uses: actions/create-github-app-token@v2
         id: generate-token
         with:
           app-id: ${{ secrets.SYNC_APP_ID }}

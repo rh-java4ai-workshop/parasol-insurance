@@ -48,7 +48,7 @@ jobs:
       contents: write
       pull-requests: write
     steps:
-      - uses: actions/create-github-app-token@v1
+      - uses: actions/create-github-app-token@v2
         id: generate-token
         with:
           app-id: ${{ secrets.SYNC_APP_ID }}
