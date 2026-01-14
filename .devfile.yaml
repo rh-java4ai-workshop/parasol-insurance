@@ -49,3 +49,12 @@ components:
       memoryLimit: 6G
       cpuRequest: 1000m
       cpuLimit: 4000m
+commands:
+  - id: set-java-bin
+    exec:
+      component: tools
+      commandLine: "ln -f -s /usr/lib/jvm/java-21-openjdk/bin /home/user/.java/current"
+      workingDir: "/home/user"
+events:
+  postStart: 
+    - set-java-bin
