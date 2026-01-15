@@ -6,7 +6,7 @@ attributes:
 components:
   - name: tools
     container:
-      image: registry.redhat.io/devspaces/udi-rhel9:3.25.0
+      image: quay.io/devfile/universal-developer-image:ubi9-9b60f86
       env:
         - name: QUARKUS_HTTP_HOST
           value: 0.0.0.0
@@ -18,10 +18,6 @@ components:
           value: 'true'
         - name: TESTCONTAINERS_CHECKS_DISABLE
           value: 'true'
-        - name: VSCODE_JAVA_EXEC
-          value: '/usr/lib/jvm/java-21-openjdk/bin/java'
-        - name: JAVA_HOME
-          value: '/usr/lib/jvm/java-21-openjdk/'
       endpoints:
         - exposure: none
           name: debug
@@ -49,12 +45,3 @@ components:
       memoryLimit: 6G
       cpuRequest: 1000m
       cpuLimit: 4000m
-commands:
-  - id: set-java-bin
-    exec:
-      component: tools
-      commandLine: "ln -f -s /usr/lib/jvm/java-21-openjdk/bin /home/user/.java/current"
-      workingDir: "/home/user"
-events:
-  postStart: 
-    - set-java-bin
