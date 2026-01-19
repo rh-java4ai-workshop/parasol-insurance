@@ -4,7 +4,7 @@ Patternfly Seed is an open source build scaffolding utility for web apps. The pr
 
 Out of the box you'll get an app layout with chrome (header/sidebar), routing, build pipeline, test suite, and some code quality tools. Basically, all the essentials.
 
-<img width="1058" alt="Out of box dashboard view of patternfly seed" src="https://user-images.githubusercontent.com/5942899/103803761-03a0a500-501f-11eb-870a-345d7d035e6b.png">
+!["Out of box dashboard view of patternfly seed"](https://user-images.githubusercontent.com/5942899/103803761-03a0a500-501f-11eb-870a-345d7d035e6b.png)
 
 ## Quick-start
 
@@ -90,7 +90,7 @@ body {
 ```
 
 ## Adding custom CSS
-When importing CSS from a third-party package for the first time, you may encounter the error `Module parse failed: Unexpected token... You may need an appropriate loader to handle this file typ...`. You need to register the path to the stylesheet directory in [stylePaths.js](./stylePaths.js). We specify these explicitly for performance reasons to avoid webpack needing to crawl through the entire node_modules directory when parsing CSS modules.
+When importing CSS from a third-party package for the first time, you may encounter the error `Module parse failed: Unexpected token... You may need an appropriate loader to handle this file type...`. You need to register the path to the stylesheet directory in [stylePaths.js](./stylePaths.js). We specify these explicitly for performance reasons to avoid webpack needing to crawl through the entire node_modules directory when parsing CSS modules.
 
 ## Code quality tools
 * For accessibility compliance, we use [react-axe](https://github.com/dequelabs/react-axe)

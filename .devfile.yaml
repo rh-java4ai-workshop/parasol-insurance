@@ -6,7 +6,7 @@ attributes:
 components:
   - name: tools
     container:
-      image: quay.io/devfile/universal-developer-image:ubi8-8fca167
+      image: quay.io/devfile/universal-developer-image:ubi9-9b60f86
       env:
         - name: QUARKUS_HTTP_HOST
           value: 0.0.0.0
